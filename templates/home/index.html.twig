@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<h1>Bienvenue !</h1>
+
+        {% for article in articles %}
+    <div>
+        <p>{{ article.title }}</p>
+        <img src="{{ article.picture }}">
+        <p>Mis en ligne le : {{ article.date|date('d/m/Y') }}</p>
+        <a href="{{ path('article', {'id':article.id}) }}">Afficher</a>
+    </div>
+{% endfor %}
+{% endblock %}

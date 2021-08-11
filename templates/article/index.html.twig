@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block body %}
+<h1>{{ article.title }}</h1>
+    <img src="{{ article.picture }}">
+    <p>{{ article.description }}</p>
+    <p>mis en ligne le : {{ article.date|date('d/m/Y') }}</p>
+{% endblock %}
